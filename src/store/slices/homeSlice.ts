@@ -1,3 +1,5 @@
+import avatar from '../../assets/avatar.png';
+
 interface HomeState {
   profile: {
     name: string;
@@ -30,7 +32,7 @@ const initialState: HomeState = {
   profile: {
     name: 'Jen Nelson',
     email: 'jennelsonfitness@gmail.com',
-    avatar: '/src/assets/avatar.png',
+    avatar: avatar,
   },
   stats: {
     visitors: 416,
