@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Poppins", sans-serif;
+  --font-family-mono: "Fira Code", monospace;
+}
+
+:root {
+  /* Colors */
+  --color-primary: theme(colors.purple.600);
+  --color-primary-hover: theme(colors.purple.700);
+  --color-secondary: theme(colors.gray.600);
+  --color-text-primary: theme(colors.gray.800);
+  --color-text-secondary: theme(colors.gray.600);
+  --color-text-muted: theme(colors.gray.500);
+  --color-text-light: theme(colors.gray.400);
+  --color-border: theme(colors.gray.200);
+  --color-background: theme(colors.white);
+  --color-background-secondary: theme(colors.gray.50);
+
+  /* Spacing */
+  --spacing-page-x: theme(spacing.8);
+  --spacing-page-y: theme(spacing.6);
+  --spacing-section: theme(spacing.6);
+  --spacing-card: theme(spacing.4);
+  --spacing-gap: theme(spacing.6);
+
+  /* Border radius */
+  --radius-card: theme(borderRadius.2xl);
+  --radius-button: theme(borderRadius.lg);
+  --radius-input: theme(borderRadius.lg);
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-button: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Utility classes */
+.page-container {
+  @apply flex gap-6 px-8 py-6 w-full justify-center mx-auto max-w-[85rem];
+}
+
+.section-card {
+  @apply bg-white rounded-2xl p-6;
+}
+
+.section-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.text-heading {
+  @apply text-3xl text-gray-800;
+}
+
+.text-heading-secondary {
+  @apply text-2xl text-gray-800;
+}
+
+.text-body {
+  @apply text-gray-600;
+}
+
+.text-muted {
+  @apply text-gray-500;
+}
+
+.btn-primary {
+  @apply bg-purple-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-purple-700 transition-colors;
+}
+
+.btn-ghost {
+  @apply text-purple-600 hover:text-purple-700;
+}
+
+.grid-responsive {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.grid-stats {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
